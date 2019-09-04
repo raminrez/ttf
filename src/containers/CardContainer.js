@@ -7,18 +7,10 @@ class CardContainer extends Component {
       <section className='section'>
         <div className='container'>
           <div className='columns is-multiline'>
-            <div className='column is-one-third'>
-              <Card />
-            </div>
-            <div className='column is-one-third'>
-              <Card />
-            </div>
-            <div className='column is-one-third'>
-              <Card />
-            </div>
-            <div className='column is-one-third'>
-              <Card />
-            </div>
+            <Card />
+            <Card />
+            <Card />
+            <Card />
           </div>
         </div>
       </section>

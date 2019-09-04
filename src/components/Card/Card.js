@@ -5,10 +5,12 @@ import CardFooter from "./CardFooter/CardFooter";
 
 const Card = () => {
   return (
-    <div className='card'>
-      <CardImage />
-      <CardContent />
-      <CardFooter />
+    <div className='column is-one-third'>
+      <div className='card'>
+        <CardImage />
+        <CardContent />
+        <CardFooter />
+      </div>
     </div>
   );
 };
