@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
 
 import "./App.scss";
@@ -7,24 +7,21 @@ import Toolbar from "./components/Toolbar/Toolbar";
 import { doFetchProducts } from "./redux/actions/product";
 import { getAllProducts } from "./redux/selectors/product";
 
-class App extends Component {
-  componentDidMount() {
-    this.props.onFetchProducts();
-  }
+const App = ({ products, onFetchProducts }) => {
+  useEffect(() => {
+    onFetchProducts();
+  }, []);
 
-  render() {
-    console.log(this.props.products);
-    return (
-      <>
-        <Toolbar />
-        <CardContainer />
-      </>
-    );
-  }
-}
+  return (
+    <>
+      <Toolbar />
+      <CardContainer products={products} />
+    </>
+  );
+};
 
 const mapStateToProps = state => ({
-  products: () => getAllProducts(state)
+  products: getAllProducts(state)
 });
 
 const mapDispatchToProps = dispatch => ({
