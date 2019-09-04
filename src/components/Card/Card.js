@@ -3,12 +3,12 @@ import CardImage from "./CardImage/CardImage";
 import CardContent from "./CardContent/CardContent";
 import CardFooter from "./CardFooter/CardFooter";
 
-const Card = () => {
+const Card = ({ title, subtitle }) => {
   return (
     <div className='column is-one-third'>
       <div className='card'>
         <CardImage />
-        <CardContent />
+        <CardContent title={title} subtitle={subtitle} />
         <CardFooter />
       </div>
     </div>

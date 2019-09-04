@@ -1,21 +1,18 @@
-import React, { Component } from "react";
+import React from "react";
 import Card from "../components/Card/Card";
 
-class CardContainer extends Component {
-  render() {
-    return (
-      <section className='section'>
-        <div className='container'>
-          <div className='columns is-multiline'>
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-          </div>
+const CardContainer = ({ products }) => {
+  return (
+    <section className='section'>
+      <div className='container'>
+        <div className='columns is-multiline'>
+          {products.map(({ title, desc, id, price, quantity }) => (
+            <Card title={title} subtitle={desc} />
+          ))}
         </div>
-      </section>
-    );
-  }
-}
+      </div>
+    </section>
+  );
+};
 
 export default CardContainer;
