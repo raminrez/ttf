@@ -3,15 +3,15 @@ import React from "react";
 const CardFooter = ({ price }) => {
   return (
     <footer className='card-footer'>
-      <div className='card-footer-item'>
-        <a href='#' className='button is-fullwidth is-success '>
+      <div className='card-footer-item '>
+        <a
+          href='#'
+          className='button is-fullwidth is-success has-text-weight-light'
+        >
           همین حالا خرید کن
         </a>
       </div>
-      <p
-        style={{ textAlign: "right" }}
-        className='card-footer-item has-text-success'
-      >
+      <p className='card-footer-item has-text-success has-text-right is-unselectable'>
         {`  ${price} ت `}
       </p>
     </footer>
