@@ -1,8 +1,12 @@
-import { PRODUCT_ADD } from "../constants/actionTypes";
+import { PRODUCT_ADD, PRODUCT_FETCH } from "../constants/actionTypes";
 
 const doAddProducts = products => ({
   type: PRODUCT_ADD,
-  products
+  products: products.items
 });
 
-export { doAddProducts };
+const doFetchProducts = () => ({
+  type: PRODUCT_FETCH
+});
+
+export { doAddProducts, doFetchProducts };
