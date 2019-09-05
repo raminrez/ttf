@@ -3,11 +3,13 @@ import { CARD_ADD, CARD_REMOVE, CARD_SORT } from "../constants/actionTypes";
 const INITIAL_STATE = {};
 
 const applyAddToCard = (state, action) => {
-  const { createdAt } = action;
+  const { createdAt, title } = action.payload;
+
   return {
     ...state,
     [createdAt]: {
-      quantity: state[createdAt] ? state[createdAt].quantity + 1 : 1
+      quantity: state[createdAt] ? state[createdAt].quantity + 1 : 1,
+      title
     }
   };
 };

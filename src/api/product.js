@@ -1,5 +1,5 @@
 const TAKHFIFAN_TEST_URL =
-  "http://www.mocky.io/v2/5cd2bb7631000086283399be?mocky-delay=200ms";
+  "http://www.mocky.io/v2/5cd2bb7631000086283399be?mocky-delay=300ms";
 
 const fetchProducts = () =>
   fetch(TAKHFIFAN_TEST_URL).then(response => response.json());

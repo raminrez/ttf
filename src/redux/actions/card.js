@@ -1,8 +1,8 @@
 import { CARD_ADD, CARD_REMOVE } from "../constants/actionTypes";
 
-const doAddToCard = createdAt => ({
+const doAddToCard = payload => ({
   type: CARD_ADD,
-  createdAt
+  payload
 });
 
 const doRemoveFromCard = createdAt => ({
